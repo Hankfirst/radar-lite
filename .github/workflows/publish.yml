@@ -1,0 +1,41 @@
+name: Publish
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Prepare site
+        run: |
+          set -euo pipefail
+          mkdir -p public
+          cp index.html public/index.html
+          touch public/.nojekyll
+          curl -fL --retry 4 --retry-all-errors --connect-timeout 20 \
+            'https://alphacephei.com/vosk/models/vosk-model-small-cn-0.22.zip' \
+            -o /tmp/vosk-cn.zip
+          python3 tools/build_model.py /tmp/vosk-cn.zip public/model.tar.gz
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Deploy
+        id: deploy
+        uses: actions/deploy-pages@v4
