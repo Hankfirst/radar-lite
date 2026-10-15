@@ -7,7 +7,7 @@
 <title>红包雷达 Lite</title>
 <style>
 :root{color-scheme:dark;font:14px/1.6 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#0f1726;color:#eef4fe}
-*{box-sizing:border-box}body{margin:0;padding:16px 12px 42px}main{max-width:640px;margin:0 auto}h1{font-size:24px;margin:0}h2{font-size:16px;margin:0 0 10px}p{margin:8px 0;color:#b7c7d9}.title{display:flex;gap:11px;align-items:center;margin:4px 3px 18px}.logo{height:44px;width:44px;border-radius:12px;display:grid;place-items:center;background:#173d34;color:#88f2c7;font-size:30px;font-weight:700}.sub{font-size:12px;color:#adc2d7}.card{background:#19283d;border:1px solid #31445c;border-radius:15px;padding:15px;margin-bottom:12px}.callout{background:#31402f;color:#dfedcf;border-radius:11px;padding:10px 12px;font-size:12px;line-height:1.6}.badnotice{background:#503638;color:#ffe3e4}.top{display:flex;justify-content:space-between;align-items:center;gap:10px}.pill{background:#344052;color:#d8e5f5;font-size:12px;border-radius:30px;padding:3px 10px}.pill.live{background:#104638;color:#91edbc}.pill.error{background:#69363c;color:#ffd0d3}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0 0}button{border:0;min-height:44px;border-radius:10px;padding:9px 8px;cursor:pointer;font:700 14px inherit;background:#50d6a1;color:#073121}button.alt{background:#33465f;color:#edf5ff}button:disabled{opacity:.44}.wide{grid-column:1/-1}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.metric{background:#111d30;border-radius:10px;padding:10px;font-size:12px;color:#bdcfe2}.metric b{font-size:17px;color:#f6fafc;display:block;margin-top:3px;font-variant-numeric:tabular-nums}.meter{margin-top:12px;height:7px;border-radius:10px;background:#0e1a2b;overflow:hidden}.meter>div{height:100%;background:#64e2b0;width:0}.panel{background:#101c2e;border:1px solid #30445e;border-radius:9px;padding:12px;min-height:65px;overflow-wrap:anywhere}.hint{font-size:12px;color:#aebfd3;line-height:1.6}label{display:block;color:#b6c9dc;font-size:12px;margin-top:11px;margin-bottom:5px}input,textarea{width:100%;background:#101c2d;border:1px solid #415774;color:#f0f8ff;border-radius:9px;padding:10px;font:inherit;min-width:0}input[type=number]{width:110px}ul.log{list-style:none;margin:0;padding:0;max-height:260px;overflow:auto}li{border-bottom:1px solid #344259;padding:7px 0;color:#c8d6ea;font-size:12px}time{color:#8eabc4;margin-right:10px}li.alert{color:#88efbf}li.error{color:#ffb7b8}.help{color:#b9cde0;font-size:12px;line-height:1.8}.help a{color:#97cfff}.footer{font-size:12px;color:#92a9be}
+*{box-sizing:border-box}body{margin:0;padding:16px 12px 42px}main{max-width:640px;margin:0 auto}h1{font-size:24px;margin:0}h2{font-size:16px;margin:0 0 10px}p{margin:8px 0;color:#b7c7d9}.title{display:flex;gap:11px;align-items:center;margin:4px 3px 18px}.logo{height:44px;width:44px;border-radius:12px;display:grid;place-items:center;background:#173d34;color:#88f2c7;font-size:30px;font-weight:700}.sub{font-size:12px;color:#adc2d7}.card{background:#19283d;border:1px solid #31445c;border-radius:15px;padding:15px;margin-bottom:12px}.callout{background:#31402f;color:#dfedcf;border-radius:11px;padding:10px 12px;font-size:12px;line-height:1.6}.badnotice{background:#503638;color:#ffe3e4}.top{display:flex;justify-content:space-between;align-items:center;gap:10px}.pill{background:#344052;color:#d8e5f5;font-size:12px;border-radius:30px;padding:3px 10px}.pill.live{background:#104638;color:#91edbc}.pill.error{background:#69363c;color:#ffd0d3}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0 0}button{border:0;min-height:44px;border-radius:10px;padding:9px 8px;cursor:pointer;font:700 14px inherit;background:#50d6a1;color:#073121}button.alt{background:#33465f;color:#edf5ff}button:disabled{opacity:.44}.wide{grid-column:1/-1}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.metric{background:#111d30;border-radius:10px;padding:10px;font-size:12px;color:#bdcfe2}.metric b{font-size:17px;color:#f6fafc;display:block;margin-top:3px;font-variant-numeric:tabular-nums}.meter{margin-top:12px;height:7px;border-radius:10px;background:#0e1a2b;overflow:hidden}.meter>div{height:100%;background:#64e2b0;width:0}.model-progress{margin-top:12px;padding:11px;background:#101d2c;border:1px solid #3a5068;border-radius:10px}.model-progress[hidden]{display:none}.model-track{height:10px;background:#0b1525;overflow:hidden;border-radius:9px}.model-track>div{height:100%;width:0;background:#64e2b0;transition:width .2s}.model-track.busy>div{width:32%;animation:model-wait 1.8s ease-in-out infinite}@keyframes model-wait{0%{transform:translateX(-120%)}100%{transform:translateX(330%)}}.model-detail{font-size:12px;color:#bbd8ed;padding-top:7px;line-height:1.8}.model-progress button{min-height:32px;margin-top:8px;padding:6px 15px}.panel{background:#101c2e;border:1px solid #30445e;border-radius:9px;padding:12px;min-height:65px;overflow-wrap:anywhere}.hint{font-size:12px;color:#aebfd3;line-height:1.6}label{display:block;color:#b6c9dc;font-size:12px;margin-top:11px;margin-bottom:5px}input,textarea{width:100%;background:#101c2d;border:1px solid #415774;color:#f0f8ff;border-radius:9px;padding:10px;font:inherit;min-width:0}input[type=number]{width:110px}ul.log{list-style:none;margin:0;padding:0;max-height:260px;overflow:auto}li{border-bottom:1px solid #344259;padding:7px 0;color:#c8d6ea;font-size:12px}time{color:#8eabc4;margin-right:10px}li.alert{color:#88efbf}li.error{color:#ffb7b8}.help{color:#b9cde0;font-size:12px;line-height:1.8}.help a{color:#97cfff}.footer{font-size:12px;color:#92a9be}
 </style>
 </head>
 <body><main>
@@ -15,7 +15,7 @@
 <section class="card"><div class="top"><h2>运行状态</h2><span id="state" class="pill">未初始化</span></div>
 <div id="explain" class="callout">点击“加载中文模型”，完成后启动监听。</div>
 <div class="metrics"><div class="metric">持续监听时间<b id="uptime">00:00:00</b></div><div class="metric">声音输入<b id="micStatus">未开启</b></div><div class="metric">识别模型<b id="modelStatus">未加载</b></div><div class="metric">识别到的红包事件<b id="count">0</b></div></div>
-<div class="meter"><div id="volume"></div></div>
+<div class="meter"><div id="volume"></div></div><div id="modelProgressBox" class="model-progress" hidden><div id="modelTrack" class="model-track"><div id="modelFill"></div></div><div id="modelDetail" class="model-detail" role="status" aria-live="polite">准备加载…</div><button id="cancelLoad" class="alt" type="button">取消下载</button></div>
 <label for="modelURL">模型加载</label><div class="hint">首次打开需要下载中文识别模型。</div>
 <div class="buttons"><button id="load" class="alt wide">① 加载中文模型（首次约 42MB）</button><button id="start" disabled>② 开始持续监听</button><button id="stop" class="alt" disabled>停止监听</button><button id="test" class="alt">测试警报声</button><button id="simulate" class="alt">模拟口令</button></div>
 <p class="hint">保持本网页在前台并尽量亮屏。其他设备可正常播放直播音频。</p>
@@ -34,7 +34,7 @@
 'use strict';
 const el=(id)=>document.getElementById(id);
 const events=[];let model=null,recognizer=null,loading=false,active=false,starting=false,stream=null,ctx=null,node=null,source=null,silence=null,wakeLock=null,ticker=null,beginTime=0,eventCount=0,beepCtx=null,frames=0,volumeMax=0,lastFrameAt=0,lastText='',lastTextPaint=0;
-const lastAlarm={warn:0,alert:0};
+const lastAlarm={warn:0,alert:0};let downloadRequest=null,modelObjectURL=null;
 function log(text,kind=''){events.unshift({at:new Date().toLocaleTimeString('zh-CN',{hour12:false}),text,kind});events.length=Math.min(events.length,60);el('logs').replaceChildren(...events.map(x=>{const li=document.createElement('li');li.className=x.kind;const t=document.createElement('time');t.textContent=x.at;li.append(t,document.createTextNode(x.text));return li;}));}
 function status(msg,kind='',detail=''){el('state').textContent=msg;el('state').className='pill'+(kind?' '+kind:'');if(detail)el('explain').textContent=detail;}
 function controls(){el('load').disabled=loading||active||starting;el('start').disabled=loading||active||starting||!model;el('stop').disabled=!active&&!starting;}
@@ -45,17 +45,102 @@ function beep(type='alert'){unlockSound();if(!beepCtx)return;const ts=type==='al
 function detect(text){const clean=normalize(text),alarm=keys('alarm').find(s=>clean.includes(s)),warn=keys('pre').find(s=>clean.includes(s));const kind=alarm?'alert':warn?'warn':null;if(!kind)return;const now=Date.now(),cool=Math.max(3,Number(el('cool').value)||8)*1000;if(now-lastAlarm[kind]<cool)return;lastAlarm[kind]=now;if(kind==='alert')eventCount++;el('count').textContent=eventCount;beep(kind);log((kind==='alert'?'红包强提醒':'口令预警')+'：'+(alarm||warn),'alert');}
 function observed(text){if(!active)return;const v=String(text||'').trim();if(!v)return;const now=Date.now();if(v!==lastText||now-lastTextPaint>700){el('transcript').textContent=v;lastText=v;lastTextPaint=now;}detect(v);}
 function explainErr(e){return (e&&e.message)||String(e);}
-async function loadModel(){if(model||loading)return;if(!window.isSecureContext){status('HTTPS 必需','error','请通过 HTTPS 网站打开，不要直接从下载目录打开 HTML。');return;}if(!window.Vosk||typeof Vosk.createModel!=='function'){status('识别库加载失败','error','语音识别库暂时无法加载，请检查网络。');return;}
-loading=true;controls();el('modelStatus').textContent='加载中';status('正在加载模型','', '正在下载和加载中文模型，请保持网页打开。');log('开始加载中文离线模型');try{model=await Vosk.createModel('./model.tar.gz');try{model.setLogLevel?.(-1)}catch(e){}el('modelStatus').textContent='已就绪';status('模型已就绪','live','现在可以点击“开始持续监听”。');log('中文模型加载成功');}
-catch(e){el('modelStatus').textContent='加载失败';status('模型加载失败','error','模型不可用，请检查网络并稍后重试。'+explainErr(e));log('模型加载失败：'+explainErr(e),'error');}finally{loading=false;controls();}}
+
+function showModelProgress(message,percent=null){
+  const box=el('modelProgressBox'),track=el('modelTrack'),fill=el('modelFill');
+  box.hidden=false;el('modelDetail').textContent=message;
+  if(percent===null){track.classList.add('busy');fill.style.width='32%';}
+  else{track.classList.remove('busy');fill.style.transform='none';fill.style.width=Math.max(0,Math.min(100,percent))+'%';}
+}
+function sizeMB(bytes){return (bytes/1024/1024).toFixed(1)+' MB';}
+function downloadModelFile(url){
+  return new Promise((resolve,reject)=>{
+    const req=new XMLHttpRequest();downloadRequest=req;
+    const begin=Date.now();
+    req.open('GET',url,true);req.responseType='blob';req.timeout=300000;
+    req.onprogress=ev=>{
+      const mb=sizeMB(ev.loaded);
+      const time=Math.max(1,(Date.now()-begin)/1000);
+      const speed=(ev.loaded/1024/1024/time).toFixed(2)+' MB/s';
+      if(ev.lengthComputable&&ev.total>0){
+        const pct=Math.min(100,Math.floor(ev.loaded/ev.total*100));
+        showModelProgress('下载中 '+pct+'% · '+mb+' / '+sizeMB(ev.total)+' · '+speed,pct);
+      }else showModelProgress('正在下载：'+mb+' · '+speed+'（服务器未提供总大小）');
+    };
+    req.onload=()=>{
+      downloadRequest=null;
+      if(req.status<200||req.status>=300){reject(new Error('模型文件访问失败：HTTP '+req.status+'。请检查 GitHub Pages 是否发布成功，以及 model.tar.gz 是否存在。'));return;}
+      const blob=req.response;
+      if(!blob||blob.size<1048576||String(blob.type).includes('text/html')){reject(new Error('下载内容异常：只收到 '+(blob?sizeMB(blob.size):'0 MB')+'，可能是 GitHub Pages 尚未部署模型。'));return;}
+      resolve(blob);
+    };
+    req.onerror=()=>{downloadRequest=null;reject(new Error('网络连接失败：模型文件无法下载。请更换网络或浏览器重试。'));};
+    req.ontimeout=()=>{downloadRequest=null;reject(new Error('下载超时（5 分钟）：网络速度过慢或连接中断。'));};
+    req.onabort=()=>{downloadRequest=null;reject(new Error('已取消模型下载'));};
+    req.send();
+  });
+}
+function initializeVosk(blobURL){
+  return new Promise((resolve,reject)=>{
+    let m,done=false;
+    const timer=setTimeout(()=>finish(new Error('模型初始化超过 4 分钟。可能是手机内存不足或 WebAssembly 运行受限，请重试或改用电脑。')),240000);
+    function finish(err){
+      if(done)return;done=true;clearTimeout(timer);
+      if(err)reject(err);else resolve(m);
+    }
+    try{
+      m=new Vosk.Model(blobURL,-1);
+      m.on('load',msg=>{if(msg&&msg.result){finish(null);}else finish(new Error('语音模型解析失败，请检查模型文件格式。'));});
+      m.on('error',msg=>finish(new Error('Vosk 加载错误：'+(msg?.error||'未知原因'))));
+    }catch(e){finish(e);}
+  });
+}
+async function loadModel(){
+  if(model||loading)return;
+  if(!window.isSecureContext){status('HTTPS 必需','error','请使用 HTTPS 地址打开网页。');return;}
+  if(!window.Vosk||typeof Vosk.Model!=='function'){
+    status('识别库不可用','error','识别库脚本未加载。请检查浏览器能否访问 cdn.jsdelivr.net，或更换网络。');return;
+  }
+  loading=true;controls();el('cancelLoad').hidden=false;
+  el('modelStatus').textContent='下载中';
+  status('正在下载中文模型','','正在下载中文模型，下面会显示实际下载速度与进度。');
+  showModelProgress('正在连接模型文件服务器…',0);
+  log('开始下载模型：model.tar.gz');
+  try{
+    const url=new URL('model.tar.gz',location.href);
+    const blob=await downloadModelFile(url.href);
+    el('cancelLoad').hidden=true;
+    showModelProgress('下载完成：'+sizeMB(blob.size)+'。正在解压并初始化识别引擎，手机上可能需要较长时间…',100);
+    status('模型初始化中','','下载已结束，正在解压模型并初始化本地语音识别。');
+    el('modelStatus').textContent='初始化中';
+    log('模型文件下载完成：'+sizeMB(blob.size));
+    modelObjectURL=URL.createObjectURL(blob);
+    model=await initializeVosk(modelObjectURL);
+    try{model.setLogLevel?.(-1)}catch(e){}
+    URL.revokeObjectURL(modelObjectURL);modelObjectURL=null;
+    el('modelStatus').textContent='已就绪';
+    showModelProgress('下载并初始化成功，可以开始监听。',100);
+    status('模型已就绪','live','现在可以点击“开始持续监听”。');
+    log('中文模型加载成功');
+  }catch(e){
+    const msg=explainErr(e);
+    el('modelStatus').textContent='加载失败';
+    showModelProgress('加载失败：'+msg,0);
+    status('模型加载失败','error',msg);
+    log('模型加载失败：'+msg,'error');
+  }finally{
+    if(modelObjectURL){URL.revokeObjectURL(modelObjectURL);modelObjectURL=null;}
+    downloadRequest=null;el('cancelLoad').hidden=true;loading=false;controls();
+  }
+}
 async function askWakeLock(){if(!('wakeLock'in navigator)||document.hidden)return;try{wakeLock=await navigator.wakeLock.request('screen');}catch(e){log('无法锁定亮屏：'+explainErr(e),'error');}}
 function formatTime(s){let h=Math.floor(s/3600),m=Math.floor(s%3600/60),ss=s%60;return [h,m,ss].map(x=>String(x).padStart(2,'0')).join(':');}
 function heartbeat(){if(!active)return;el('uptime').textContent=formatTime(Math.floor((Date.now()-beginTime)/1000));const track=stream?.getAudioTracks()[0];if(!track||track.readyState!=='live'){stop('麦克风输入已断开');return;}if(ctx?.state!=='running'){status('音频已暂停','error','浏览器暂停了音频处理。请将本页放回前台并手动恢复。');el('micStatus').textContent='暂停';return;}if(Date.now()-lastFrameAt>4000){status('音频流疑似停滞','error','采集服务未继续收到音频帧，请检查是否切换到了后台、锁屏或系统回收了页面。');el('micStatus').textContent='无数据';return;}el('micStatus').textContent='正常采集中';}
 async function start(){if(active||starting||!model)return;if(!navigator.mediaDevices?.getUserMedia){status('麦克风不可用','error','请使用 HTTPS，确认浏览器开放 getUserMedia。');return;}
 starting=true;controls();unlockSound();status('请求麦克风中');try{
 stream=await navigator.mediaDevices.getUserMedia({video:false,audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:true,channelCount:1,sampleRate:16000}});
-recognizer=new model.KaldiRecognizer();recognizer.on('partialresult',msg=>observed(msg?.result?.partial));recognizer.on('result',msg=>observed(msg?.result?.text));
-ctx=new (window.AudioContext||window.webkitAudioContext)();await ctx.resume();source=ctx.createMediaStreamSource(stream);node=ctx.createScriptProcessor(4096,1,1);silence=ctx.createGain();silence.gain.value=0;
+ctx=new (window.AudioContext||window.webkitAudioContext)();await ctx.resume();recognizer=new model.KaldiRecognizer(ctx.sampleRate);recognizer.on('partialresult',msg=>observed(msg?.result?.partial));recognizer.on('result',msg=>observed(msg?.result?.text));
+source=ctx.createMediaStreamSource(stream);node=ctx.createScriptProcessor(4096,1,1);silence=ctx.createGain();silence.gain.value=0;
 node.onaudioprocess=(ev)=>{if(!active)return;try{recognizer.acceptWaveform(ev.inputBuffer);frames++;lastFrameAt=Date.now();if(frames%5===0){const d=ev.inputBuffer.getChannelData(0);let sum=0;for(let i=0;i<d.length;i++)sum+=d[i]*d[i];const rms=Math.sqrt(sum/d.length);volumeMax=Math.max(rms,volumeMax*.85);el('volume').style.width=Math.round(Math.min(100,rms*550))+'%';}}catch(e){log('模型处理音频异常：'+explainErr(e),'error');}};
 const outputSilent=()=>{};source.connect(node);node.connect(silence);silence.connect(ctx.destination);
 active=true;beginTime=Date.now();lastFrameAt=Date.now();el('micStatus').textContent='正常采集中';status('正在持续监听','live','麦克风音频正在持续传给本地 Vosk 引擎，无需等待 Web Speech 会话自动结束或重新授权。');log('开始本地持续监听');stream.getAudioTracks().forEach(t=>t.addEventListener('ended',()=>{if(active)stop('麦克风被系统终止')}));ticker=setInterval(heartbeat,1000);await askWakeLock();
@@ -65,7 +150,7 @@ async function release(){active=false;if(ticker){clearInterval(ticker);ticker=nu
 async function stop(reason='已手动停止'){if(!active&&!starting)return;await release();status('已停止','',reason);log(reason);controls();}
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&active){log('页面进入后台：Android 可能暂停收音与 WASM 推理','error');status('后台可能暂停','error','网页切到后台后无法保证继续收音。请保持本页处于前台。');}else if(active){if(ctx?.state==='suspended')ctx.resume().catch(e=>log('恢复失败：'+e.message,'error'));askWakeLock().catch(()=>{});status('正在持续监听','live','已返回前台，正在检查音频输入。');}});
 window.addEventListener('pagehide',()=>{if(active)release().catch(()=>{});});
-el('load').addEventListener('click',loadModel);el('start').addEventListener('click',start);el('stop').addEventListener('click',()=>stop());el('test').addEventListener('click',()=>{beep('alert');log('测试强警报声');});el('simulate').addEventListener('click',()=>{beep('warn');el('transcript').textContent='所有钻粉宝宝领红包啦';detect('所有钻粉宝宝领红包啦');log('模拟口令输入');});el('copy').addEventListener('click',async()=>{const t=events.slice().reverse().map(x=>x.at+' '+x.text).join('\n');try{await navigator.clipboard.writeText(t);log('日志已复制')}catch(e){log('复制失败：'+e.message,'error')}});
+el('load').addEventListener('click',loadModel);el('cancelLoad').addEventListener('click',()=>{if(downloadRequest)downloadRequest.abort();});el('start').addEventListener('click',start);el('stop').addEventListener('click',()=>stop());el('test').addEventListener('click',()=>{beep('alert');log('测试强警报声');});el('simulate').addEventListener('click',()=>{beep('warn');el('transcript').textContent='所有钻粉宝宝领红包啦';detect('所有钻粉宝宝领红包啦');log('模拟口令输入');});el('copy').addEventListener('click',async()=>{const t=events.slice().reverse().map(x=>x.at+' '+x.text).join('\n');try{await navigator.clipboard.writeText(t);log('日志已复制')}catch(e){log('复制失败：'+e.message,'error')}});
 if(!window.isSecureContext)status('当前不是安全网页','error','getUserMedia 要求 HTTPS 或合规的安全上下文。请用 HTTPS 网站打开本页面。');else if(!navigator.mediaDevices?.getUserMedia)status('麦克风接口不可用','error','当前网页无法访问麦克风，请检查浏览器和网页来源。');else status('等待加载中文模型','','请先加载中文识别模型。');
 controls();
 </script>
